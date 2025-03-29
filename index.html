@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وب‌سایت شخصی من</title>
+    <title>وب‌سایت شخصی محمدعلی برهمن</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
-            background-color: #f2f2f2; /* خاکستری روشن */
-            background-image: url('https://img.freepik.com/premium-photo/black-simple-vector-symbol-infinity-white-background-with-no-shadow-around-edges-no-gradient-shading-simple-minimalistic-style_1256366-11466.jpg?w=1380'); /* تصویر پس زمینه ریاضیات و هوش مصنوعی */
+            background-color: #d3d3d3; /* رنگ پس‌زمینه خاکستری */
+            background-image: url('https://raw.githubusercontent.com/username/repository/main/background.jpg'); /* لینک تصویر پس‌زمینه */
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            color: #fff; /* متن سفید */
+            color: #333;
+            padding: 50px;
         }
 
         h1 {
-            color: #007bff;
+            color: #00BFFF; /* آبی روشن */
         }
 
         nav {
             background-color: #333;
             overflow: hidden;
-            direction: rtl; /* جهت متن از راست به چپ */
+            text-align: right; /* دسته‌بندی‌ها از راست چین شده‌اند */
+            padding: 10px;
         }
 
         nav a {
-            float: right; /* قرار گرفتن از راست */
-            display: block;
+            display: inline-block;
             color: white;
             text-align: center;
             padding: 14px 20px;
@@ -41,19 +40,31 @@
             color: black;
         }
 
-        section {
-            margin-top: 20px;
-        }
-
-        /* استایل برای لینک‌ها در صورت فعال بودن */
         nav a.active {
             background-color: #4CAF50;
+        }
+
+        section {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* پس‌زمینه شفاف برای خوانایی بهتر */
+            border-radius: 10px;
+            display: inline-block;
+            text-align: right;
+            max-width: 800px;
+        }
+
+        /* استایل برای تصویر پروفایل */
+        #about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <h1 style="color: #00BFFF;">محمدعلی برهمن</h1> <!-- آبی روشن -->
-
+    <h1>محمدعلی برهمن</h1>
 
     <nav>
         <a href="#about">درباره من</a>
@@ -67,23 +78,11 @@
         <a href="#notes">یادداشت‌ها</a>
     </nav>
 
-    <section id="about"></section>
-
-    <section id="links"></section>
-
-    <section id="consulting"></section>
-
-    <section id="library"></section>
-
-    <section id="finance"></section>
-
-    <section id="ml"></section>
-
-    <section id="game-theory"></section>
-
-    <section id="python"></section>
-
-    <section id="notes"></section>
+    <section id="about">
+        <h2>درباره من</h2>
+        <img src="https://raw.githubusercontent.com/username/repository/main/profile.jpg" alt="تصویر محمدعلی برهمن">
+        <p>سلام! من محمدعلی برهمن هستم، دانشجوی دکتری ریاضیات با علاقه به یادگیری ماشین، نظریه بازی‌ها و ریاضی مالی. در حال پژوهش در حوزه‌های مختلف هستم و اگر مایل به همکاری هستید، خوشحال می‌شوم در ارتباط باشیم!</p>
+    </section>
 </body>
 </html>
 
