@@ -8,8 +8,8 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #d3d3d3; /* رنگ پس‌زمینه خاکستری */
-            background-image: url('https://raw.githubusercontent.com/username/repository/main/background.jpg'); /* لینک تصویر پس‌زمینه */
+            background-color: #d3d3d3;
+            background-image: url('background.jpg'); /* تصویر پس‌زمینه */
             background-size: cover;
             background-position: center;
             color: #333;
@@ -22,8 +22,12 @@
 
         nav {
             background-color: #333;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
             overflow: hidden;
-            text-align: right; /* دسته‌بندی‌ها از راست چین شده‌اند */
+            text-align: right;
             padding: 10px;
         }
 
@@ -45,16 +49,17 @@
         }
 
         section {
-            margin-top: 20px;
+            display: none;
+            margin-top: 80px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.8); /* پس‌زمینه شفاف برای خوانایی بهتر */
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            display: inline-block;
             text-align: right;
             max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* استایل برای تصویر پروفایل */
         #about img {
             width: 150px;
             height: 150px;
@@ -67,22 +72,30 @@
     <h1>محمدعلی برهمن</h1>
 
     <nav>
-        <a href="#about">درباره من</a>
-        <a href="#links">لینک‌ها</a>
-        <a href="#consulting">مشاوره</a>
-        <a href="#library">کتابخانه</a>
-        <a href="#finance">ریاضی مالی</a>
-        <a href="#ml">یادگیری ماشین</a>
-        <a href="#game-theory">نظریه بازی‌ها</a>
-        <a href="#python">پایتون</a>
-        <a href="#notes">یادداشت‌ها</a>
+        <a href="#about" onclick="showSection('about')">درباره من</a>
+        <a href="#links" onclick="showSection('links')">لینک‌ها</a>
+        <a href="#consulting" onclick="showSection('consulting')">مشاوره</a>
+        <a href="#library" onclick="showSection('library')">کتابخانه</a>
+        <a href="#finance" onclick="showSection('finance')">ریاضی مالی</a>
+        <a href="#ml" onclick="showSection('ml')">یادگیری ماشین</a>
+        <a href="#game-theory" onclick="showSection('game-theory')">نظریه بازی‌ها</a>
+        <a href="#python" onclick="showSection('python')">پایتون</a>
+        <a href="#notes" onclick="showSection('notes')">یادداشت‌ها</a>
     </nav>
 
     <section id="about">
         <h2>درباره من</h2>
-        <img src="majid.profile.pic.jpg" alt="تصویر محمدعلی برهمن">
-        <p>سلام! من محمدعلی برهمن هستم، دانشجوی دکتری ریاضیات با علاقه به یادگیری ماشین، نظریه بازی‌ها و ریاضی مالی. در حال پژوهش در حوزه‌های مختلف هستم و اگر مایل به همکاری هستید، خوشحال می‌شوم در ارتباط باشیم!</p>
+        <img src="profile.jpg" alt="تصویر محمدعلی برهمن">
+        <p>سلام! من محمدعلی برهمن هستم، دانشجوی دکتری ریاضی مالی. در حال تحقیق روی معادلات دیفرانسیل تصادفی، نظریه بازی‌ها و یادگیری ماشین هستم.</p>
     </section>
+
+    <script>
+        function showSection(id) {
+            let sections = document.querySelectorAll('section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
 
