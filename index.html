@@ -116,22 +116,50 @@
         </section>
         <section id="links"><h2>لینک‌ها</h2></section>
         <section id="consulting"><h2>مشاوره</h2></section>
-        <section id="library"><h2>کتابخانه</h2>
-        <div class="library-options">
+       <section id="library">
+    <h2>کتابخانه</h2>
+    <div class="library-options">
         <div class="library-option" onclick="toggleContent('ml-content')">یادگیری ماشین</div>
         <div class="library-option" onclick="toggleContent('sde-content')">معادلات دیفرانسیل تصادفی</div>
         <div class="library-option" onclick="toggleContent('game-theory-content')">نظریه بازی‌ها</div>
-        </div>
+    </div>
 
-        <div id="ml-content" class="library-content">
-        </div>
+    <!-- بخش یادگیری ماشین -->
+    <div id="ml-content" class="library-content">
+        <h3>کتاب‌ها و منابع یادگیری ماشین</h3>
+        <ul>
+            <li><a href="https://raw.githubusercontent.com/majidberahman/majidberahman.github.io/main/mml-book.pdf" download>دانلود کتاب Mathematics for Machine Learning</a></li>
+            <!-- می‌توانید کتاب‌های دیگری هم اضافه کنید. -->
+        </ul>
+    </div>
 
-        <div id="sde-content" class="library-content">
-        </div>
+    <!-- بخش معادلات دیفرانسیل تصادفی -->
+    <div id="sde-content" class="library-content">
+        <!-- محتوای معادلات دیفرانسیل تصادفی -->
+    </div>
 
-        <div id="game-theory-content" class="library-content">
-        </div>     
-        </section>
+    <!-- بخش نظریه بازی‌ها -->
+    <div id="game-theory-content" class="library-content">
+        <!-- محتوای نظریه بازی‌ها -->
+    </div>     
+</section>
+
+<script>
+    function toggleContent(contentId) {
+        var contents = document.querySelectorAll('.library-content');
+        contents.forEach(function(content) {
+            content.style.display = 'none';
+        });
+
+        var selectedContent = document.getElementById(contentId);
+        if (selectedContent.style.display === 'none' || selectedContent.style.display === '') {
+            selectedContent.style.display = 'block';
+        } else {
+            selectedContent.style.display = 'none';
+        }
+    }
+</script>
+
         <section id="finance"><h2>ریاضی مالی</h2></section>
         <section id="ml"><h2>یادگیری ماشین</h2></section>
         <section id="game-theory"><h2>نظریه بازی‌ها</h2></section>
